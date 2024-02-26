@@ -30,9 +30,9 @@ const Work = () => {
                     magna non et elit. Dolor  turpis molestie dui
                     magnis facilisis at fringilla quam.</p>
                 <div className='work-section-bottom'>
-                    {workInfoData.map((data) => {
+                    {workInfoData.map((data , index) => {
                         return (
-                            <div className='work-section-info'>
+                            <div className='work-section-info' key={index}>
                                 <img src={data.image} alt='icon' />
                                 <h2>{data.title}</h2>
                                 <p>{data.text}</p>
