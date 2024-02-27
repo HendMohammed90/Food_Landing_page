@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const Testimonial = () => {
     return (
-        <section className='work-section-wrapper testimonials-container'>
+        <section className='work-section-wrapper testimonials-container' id='testimonials'>
             <div className='work-section-top'>
                 <p className='primary-subheading'>Testimonial</p>
                 <h1 className="primary-heading">What They Are Saying</h1>

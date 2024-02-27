@@ -40,19 +40,29 @@ const Header = () => {
             icon: <ShoppingCartRoundedIcon />,
         },
     ];
+
+    const handleItemClick = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop - 20,
+            behavior: 'smooth',
+          });
+        }
+      };
     return (
         <nav>
             <div className="nav-logo-container">
                 <img src={Logo} alt="" />
             </div>
             <div className="navbar-links-container">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Testimonials</a>
-                <a href="">Contact</a>
-                <a href="">
+                <button className="navIcon" onClick={() => handleItemClick('home')}>Home</button>
+                <button className="navIcon" onClick={() => handleItemClick('about')}>About</button>
+                <button className="navIcon" onClick={() => handleItemClick('testimonials')}>Testimonials</button>
+                <button className="navIcon" onClick={() => handleItemClick('contact')}>Contact</button>
+                <button className="navIcon">
                     <BsCart2 className="navbar-cart-icon" />
-                </a>
+                </button>
                 <button className="primary-button">Bookings Now</button>
             </div>
             <div className="navbar-menu-container">

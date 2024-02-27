@@ -5,7 +5,7 @@ import homeImg from "../../Assets/home-banner-image.png"
 import { HiArrowSmRight } from "react-icons/hi";
 const Home = () => {
   return (
-    <section className='home-banner-container'>
+    <section className='home-banner-container' id='home'>
     <div className='home-bannerImage-container'>
       <img className='home-image-section' src={BannerImg} alt='homeBanner' />
     </div>

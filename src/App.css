@@ -40,12 +40,15 @@ nav {
 .navbar-menu-container {
   display: none;
 }
-.navbar-links-container a {
+.navbar-links-container button.navIcon {
   margin-right: 3rem;
   text-decoration: none;
   color: black;
   font-size: 1.1rem;
   font-weight: 600;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 .primary-button {
   padding: 0.9rem 1.75rem;
@@ -70,7 +73,6 @@ nav {
 }
 
 /* home banner styles */
-
 .home-banner-container {
   position: relative;
   display: flex;
