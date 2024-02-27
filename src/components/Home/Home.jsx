@@ -21,7 +21,7 @@ const Home = () => {
         </button>
     </div>
     <div className='home-image-section'>
-      <img src={homeImg} alt='homeImg'/>
+      <img src={homeImg} alt='homeImg' className="logo"/>
     </div>
 
   </section>
