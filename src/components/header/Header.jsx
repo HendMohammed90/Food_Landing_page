@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../../Assets/Logo.svg";
+import Logo3 from "../../Assets/FLogo.png"
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
@@ -14,7 +15,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -35,10 +35,6 @@ const Header = () => {
             text: "Contact",
             icon: <PhoneRoundedIcon />,
         },
-        {
-            text: "Cart",
-            icon: <ShoppingCartRoundedIcon />,
-        },
     ];
 
     const handleItemClick = (sectionId) => {
@@ -53,16 +49,18 @@ const Header = () => {
     return (
         <nav>
             <div className="nav-logo-container">
-                <img src={Logo} alt="" />
+                <img src={Logo3} alt="" />
             </div>
             <div className="navbar-links-container">
                 <button className="navIcon" onClick={() => handleItemClick('home')}>Home</button>
                 <button className="navIcon" onClick={() => handleItemClick('about')}>About</button>
                 <button className="navIcon" onClick={() => handleItemClick('testimonials')}>Testimonials</button>
                 <button className="navIcon" onClick={() => handleItemClick('contact')}>Contact</button>
-                <button className="navIcon">
-                    <BsCart2 className="navbar-cart-icon" />
-                </button>
+                
+                {/* {menuOptions.map((data,index)=>{
+                return(   <button key={index} className="navIcon" onClick={({data}) => handleItemClick('home')}>{data.text}</button> )
+                })} */}
+                
                 <button className="primary-button">Bookings Now</button>
             </div>
             <div className="navbar-menu-container">

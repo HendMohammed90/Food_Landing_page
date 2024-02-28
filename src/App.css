@@ -35,7 +35,8 @@ nav {
 }
 
 .nav-logo-container img{
-  width: 11vw;
+  width: 13vw;
+  padding-top: 1rem;
 }
 .navbar-menu-container {
   display: none;
@@ -160,7 +161,7 @@ nav {
 }
 .about-section-image-container {
   flex: 0.9;
-  margin-right: 1rem;
+  margin-right: 3rem;
 }
 .about-section-text-container {
   flex: 1;
