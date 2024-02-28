@@ -381,6 +381,22 @@ textarea {
   color: #e48f0f;
 }
 
+.footer-wrapper p {
+  text-transform: capitalize;
+  /* position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0; Adjust padding as needed */
+}
+
+.footer-wrapper p a{
+  color: #e48f0f;
+  text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
   .navbar-links-container a {
     margin-right: 1rem;

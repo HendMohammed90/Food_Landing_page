@@ -3,7 +3,7 @@ import { BsTwitter } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
 import { BsYoutube } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
-import Logo from "../../Assets/Logo.svg"
+import Logo from "../../Assets/FLogo.png"
 
 const Footer = () => {
   return (
@@ -38,7 +38,9 @@ const Footer = () => {
           <span>Terms & Conditions</span>
           <span>Privacy Policy</span>
         </div>
+        <p>Created by: <a href="https://github.com/HendMohammed90" target="_blank" rel="noreferrer">Hend Mohammed</a> © 2024 Happy to Help ^_^</p>
       </div>
+
     </section>
   )
 }
