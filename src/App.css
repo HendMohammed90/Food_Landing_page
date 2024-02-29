@@ -409,7 +409,7 @@ textarea {
     max-width: 600px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .nav-logo-container {
     max-width: 140px;
   }
@@ -474,7 +474,7 @@ textarea {
     margin-right: 0.5rem !important;
   }
   .about-section-image-container {
-    margin-right: 0rem !important;
+    margin: 0 auto !important;
   }
   .work-section-wrapper {
     margin-top: 5rem !important;

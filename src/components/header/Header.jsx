@@ -22,45 +22,52 @@ const Header = () => {
         {
             text: "Home",
             icon: <HomeIcon />,
+            sectionId: "home",
         },
         {
             text: "About",
             icon: <InfoIcon />,
+            sectionId: "about", 
         },
         {
             text: "Testimonials",
             icon: <CommentRoundedIcon />,
+            sectionId: "testimonials", 
         },
         {
             text: "Contact",
             icon: <PhoneRoundedIcon />,
+            sectionId: "contact", 
         },
     ];
+
 
     const handleItemClick = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-          window.scrollTo({
-            top: section.offsetTop - 20,
-            behavior: 'smooth',
-          });
+            window.scrollTo({
+                top: section.offsetTop - 20,
+                behavior: 'smooth',
+            });
         }
-      };
+    };
+
+    const handleMenuOptionClick = (item) => {
+        handleItemClick(item.sectionId);
+    };
+
     return (
         <nav>
             <div className="nav-logo-container">
                 <img src={Logo3} alt="" />
             </div>
             <div className="navbar-links-container">
-                <button className="navIcon" onClick={() => handleItemClick('home')}>Home</button>
-                <button className="navIcon" onClick={() => handleItemClick('about')}>About</button>
-                <button className="navIcon" onClick={() => handleItemClick('testimonials')}>Testimonials</button>
-                <button className="navIcon" onClick={() => handleItemClick('contact')}>Contact</button>
-                
-                {/* {menuOptions.map((data,index)=>{
-                return(   <button key={index} className="navIcon" onClick={({data}) => handleItemClick('home')}>{data.text}</button> )
-                })} */}
-                
+                {menuOptions.map((item, index) => (
+                    <button key={index} className="navIcon" onClick={() => handleItemClick(item.sectionId)}>
+                        {item.text}
+                    </button>
+                ))}
+
                 <button className="primary-button">Bookings Now</button>
             </div>
             <div className="navbar-menu-container">
@@ -76,7 +83,7 @@ const Header = () => {
                     <List>
                         {menuOptions.map((item) => (
                             <ListItem key={item.text} disablePadding>
-                                <ListItemButton>
+                                <ListItemButton onClick={() => handleMenuOptionClick(item)}>
                                     <ListItemIcon>{item.icon}</ListItemIcon>
                                     <ListItemText primary={item.text} />
                                 </ListItemButton>
